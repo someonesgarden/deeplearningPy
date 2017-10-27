@@ -1,0 +1,33 @@
+### Linear Regression
+    Regression
+    Closed-form solution
+    Pure Python / Numpy
+
+### Logistic Regression
+    Binary classification (sigmoid)
+    No closed-form solution -> Gradient descent
+    Pure Python / Numpy
+
+### Deep Learning
+    K-class classification (softmax)
+    More gradient descent (backpropagation)
+    Plug-n-play
+    TensorFlow
+
+### Deep Learning 2
+    Improving gradient descent
+        - stochastic / batch
+        - momentum
+        - adaptive LR
+    Ground-up Theano
+    Ground-up TensorFlow / GPU
+
+
+*** Even later..
+
+    : unsupervised learning : PCA, autoencoders, RBMs
+    : convolutional neural networks : image processing
+    : recurrent neural networks : learning sequences
+    : reinforcement learning : playing video games
+    : MNIST
+    

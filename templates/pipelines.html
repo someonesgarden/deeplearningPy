@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="cover-heading text-center">Pinelines.</h2>
+
+<div id="step1" class="row factory-box">
+    <div class="col col-xs-12 col-sm-4">
+        <h3 class="cover-heading">Estimate generalization performance</h3>
+        <h4>The holdout method</h4>
+        <h4>k-fold cross-validation</h4>
+        <p>
+            A better way of using the holdout method for model selection is
+            to separate the data into three parts: a training set, a validation set, and a test set.
+        </p>
+        <p>
+            Learning Curve
+        </p>
+        <img class="img-rounded img-responsive" src="/static/img/1234.png"/><br/>
+         <img class="img-rounded img-responsive" src="/static/img/3245.png"/>
+
+        <br/><br/>
+
+        <h4></h4>
+        <p>Learning Curves, validation curves</p>
+
+        <p>
+            Regularization parameter, depth parameter as the Hyperparameters<br/>
+            <br/>
+
+            Grid search = Find the optimal combination for hyperparameter values.
+        </p>
+        <p>
+            Fine-tuning machine learning models via grid search
+        </p>
+        Using k-fold cross-validation in combination with grid search is a useful approach for fine-tuningthe performance
+        of machine learning model by varying its hyperparameters values
+
+        <h4>nested cross-validation</h4>
+
+        <h4>Performance evaluation metrics</h4>
+        <p>
+            accuracy, precision, recall, F1-score, ..
+        </p>
+
+        <p>
+            TPR:true positive rate,  FPR:false positive rate,
+            PRE:precision, REC: recall(synonymous to the true positive rate)
+
+        </p>
+
+        <h4>ROC: Receiver Operator Characteristic</h4>
+    </div>
+
+    <div class="col col-xs-12 col-sm-8">
+
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_script %}
+
+<link rel="stylesheet" href="/static/css/masonry.css">
+<script src="/static/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script src="/static/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    $('li#pipelines').addClass('active');
+
+    var $container = $('#thumbnails');
+    $container.imagesLoaded(function() {
+        $container.masonry({
+            columnWidth: '.thumb',
+            itemSelector: '.thumb'
+        });
+    });
+});
+</script>
+{% endblock %}

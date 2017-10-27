@@ -1,0 +1,253 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="cover-heading text-center">Deep Learning » Factory.</h2>
+<p class="lead">
+dsafgdfasgs
+</p>
+<div id="step1" class="row factory-box">
+    <div class="col col-xs-12 col-sm-4">
+        <h4 class="cover-heading">1)Raw Data Input.</h4>
+        <p>Imputation<br/></p>
+    </div>
+
+    <div class="col col-xs-12 col-sm-8">
+        <h4>status » </h4>
+        <pre class="dark" style="font-size:8px;">{% raw %}{{ query.comment }}  {% endraw %}</pre>
+        <div class="form-group">
+            <h4>parameters » </h4>
+                <switcher class="checkbox-inline"
+                ng-model="query.upload_is" ng-disabled="isDisabled"
+                ng-change="onChange(newValue, oldValue)"
+                true-label="Upload the data file(CSV)"
+                false-label="Enter the URL of the CSV data">
+                </switcher><br/>
+                <switcher class="checkbox-inline" ng-model="query.header_is"
+                true-label="1st row of the data is HEADER" false-label="There is no header row">
+                </switcher><br/>
+                <switcher class="checkbox-inline" ng-model="query.null_del_is"
+                true-label="Delete all Null rows" false-label="NULLs are imputed with averages">
+                </switcher>
+            </div>
+
+            <div ng-show="query.upload_is">
+
+                <div class="form-group">
+                     <label for="the_file">Data File / Url</label>
+                    <input type="file"  id="the_file" name="the_file" class="filestyle" file-model="query.file" data-icon="false">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" ng-click="step.dataLoadBtnAction('upload')">Next</button>
+            </div>
+            <div ng-hide="query.upload_is">
+            <div class="form-group">
+                <div>
+                    <textarea class="form-control" ng-model="query.url" rows="2"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" ng-click="step.dataLoadBtnAction('url')">Load Raw Data</button>
+        </div>
+    </div>
+</div><!-- step1 -->
+
+
+<div id="step2" class="row factory-box" ng-show="query.status>0">
+    <div class="col col-xs-12 col-sm-4">
+        <h4 class="cover-heading">2) Target and Samples </h4>
+           {% raw %}
+        <p>Target Column(T) is <span style="color:orange;">{{model.t.selected}}</span><br/>
+            the first Sample Column(X1) is <span style="color:orange;">{{model.x1.selected}}</span><br/>
+            the second Sample Column(X2) is <span style="color:orange;">{{model.x2.selected}}</span><br/>
+                </p>
+         {% endraw %}
+    </div>
+
+    <div class="col col-xs-12 col-sm-8">
+        {% raw %}
+            <table class="table table-condensed" style="table-layout: fixed;">
+                <tr>
+                    <td ng-repeat="(key,val) in loaded.csv_column" style="font-size:10px; font-weight:bold;"><span style="color:orange;">{{val}}</span><br/>
+                        <label>
+                          T <input type="radio" ng-model="model.t.selected" value="{{key}}" ng-change="step.sampleSelection($index)">
+                            <br/>
+                          X1<input type="radio" ng-model="model.x1.selected" value="{{key}}" ng-change="step.sampleSelection($index)">
+                             &nbsp;
+                          X2<input type="radio" ng-model="model.x2.selected" value="{{key}}" ng-change="step.sampleSelection($index)">
+                        </label>
+                        <br/>
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-condensed" style="table-layout: fixed;font-size:8px;">
+                <tr ng-repeat="(key1,value1) in loaded.csv_rows">
+                    <td ng-repeat="(key2,value2) in value1" style="font-size:12px;">{{value2}} </td>
+                </tr>
+            </table>
+
+            {% endraw %}
+    </div>
+</div><!-- step2 -->
+
+<div id="step3" class="row factory-box" ng-show="query.status>1">
+    <div class="col col-xs-12 col-sm-4">
+         {% raw %}
+        <h4>3) Target Modification</h4>
+        <p>Target Column(T) is {{model.t.selected}}<br/>
+            the first Sample Column(X1) is {{model.x1.selected}} the second Sample Column(X2) is {{model.x2.selected}}. <br/>
+                </p>
+         {% endraw %}
+    </div>
+
+    <div class="col col-xs-12 col-sm-8">
+        {% raw %}
+                <p>
+                </p>
+
+                <div  class="table-responsive">
+                    <h4><span style="color:orange;">{{model.t.colname}}</span></h4>
+                    <table class="table table-condensed" style="table-layout: fixed;font-size:8px;">
+                        <tr><td ng-repeat="(key,val) in loaded.t_labels">
+                        {{val}}
+                        </td></tr>
+                    </table>
+                </div>
+                <div class="btn-group btn-group-justified">
+                    <label class="btn btn-success" ng-model="model.t.modify" uib-btn-radio="0" ng-change="step.labelMapAction(0)">Leave it as it is</label>
+                    <label class="btn btn-success" ng-model="model.t.modify" uib-btn-radio="1" ng-change="step.labelMapAction(1)">Map labels to [-1,1]</label>
+                    <label class="btn btn-success" ng-model="model.t.modify" uib-btn-radio="2" ng-change="step.labelMapAction(2)">Map lalbes to [0, ~]</label>
+                </div>
+         {% endraw %}
+    </div>
+</div><!-- step3 -->
+
+
+<div id="step4" class="row factory-box" ng-show="query.status>2">
+
+    <div class="col col-xs-12 col-sm-4">
+        <h4 class="cover-heading">4) Sample Preprocess</h4>
+        <p></p>
+    </div>
+
+    <div class="col col-xs-12 col-sm-8">
+        {% raw %}
+
+        <div class="form-group col-xs-12 col-sm-6">
+        <label for="model_sample_max"> sample max </label>
+        <input type="text" class="form-control" id="model_sample_max" size="4" ng-model="model.sample_max" placeholder="Sample max"/>
+        </div>
+
+        <div class="form-group col-xs-12 col-sm-6">
+        <label for="model_test_size">Test Size(0.1~0.9) </label>
+        <input type="text" class="form-control" id="model_test_size" size="5" ng-model="model.test_size" placeholder="Test Size ..">
+        </div>
+
+        <label for="model_sample_scaling"> Sample Scaling </label>
+        <div id="model_sample_scaling" class="btn-group btn-group-justified">
+            <label class="btn btn-success" ng-model="model.sample_scaling" uib-btn-radio="0">No change</label>
+            <label class="btn btn-success" ng-model="model.sample_scaling" uib-btn-radio="1">Normalize</label>
+            <label class="btn btn-success" ng-model="model.sample_scaling" uib-btn-radio="2">Standardize</label>
+        </div>
+
+        {% endraw %}
+    </div>
+</div><!-- step4 -->
+
+<div id="step5" class="row factory-box" ng-show="query.status>2">
+
+    <div class="col col-xs-12 col-sm-4">
+    </div>
+
+    <div class="col col-xs-12 col-sm-8">
+    {% raw %}
+    <pre style="font-size:8px;">Data URL: [ {{query.url}} ]
+[X1={{model.x1.selected}}, X2={{model.x2.selected}}] = T[{{model.t.selected}} ~ {{model.t.colname }}]
+Target: {{
+model.t.modify ==0 ? 'No Modify' : (model.t.modify==2 ? 'Map to [0,~]' : 'Map to [-1,1]')
+}}
+Header Position:  {{query.header_is? '0th row' : 'no header'}}
+Null treatment: {{query.null_del_is? 'Delete All' : 'Imputing with Ave.'}}
+Data Loading:  {{(query.upload_is)? 'UPLOAD' : 'URL'}}
+</pre>
+        <div class="form-group">
+            <label for="check_fit_type">Fit Type</label>
+            <select class="form-control" id="check_fit_type" ng-model="query.action">
+                <option value="0">Density Graph</option>
+                <option value="1">Weight Coefficient</option>
+                <option value="2">Feature Importance by RF</option>
+                <option value="3">Principal Component Analysis</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="pre_analysis">Pre Analysis</label>
+            <div class="btn-group btn-group-justified" id="pre_analysis">
+                <label class="btn btn-success" ng-model="model.pre_analysis" uib-btn-radio=0>None</label>
+                <label class="btn btn-success" ng-model="model.pre_analysis" uib-btn-radio=1>Use PCA</label>
+                <label class="btn btn-success" ng-model="model.pre_analysis" uib-btn-radio=2>Use LDA</label>
+                <label class="btn btn-success" ng-model="model.pre_analysis" uib-btn-radio=3>Use Kernel PCA</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-xs-12 col-sm-4">
+    </div>
+    <div class="col col-xs-12 col-sm-4">
+         <div class="form-group">
+            <label for="select_learn_type">Fit Algorithm </label>
+            <select class="form-control" id="select_learn_type" ng-model="query.algorithm_selected" ng-options="item as item.name for (index, item) in model.algorithm">
+            </select>
+            <label for="model_random_state"> random state </label>
+            <input type="text" class="form-control" id="model_random_state" size="3" ng-model="model.random_state" placeholder="Random State">
+            <label for="model_penalty"> penalty </label>
+            <select class="form-control" id="model_penalty" ng-model="model.penalty">
+                <option>l1</option>
+                <option>l2</option>
+            </select>
+            <label for="model_c"> C </label>
+            <input type="text" class="form-control" size="5" id="model_c" ng-model="model.c" placeholder="Learn C Value">
+        </div>
+    </div>
+
+    <div class="col col-xs-12 col-sm-4">
+        <div class="form-group">
+            <label for="model_eta"> \(\eta\) </label>
+            <input type="text" class="form-control" id="model_eta" size="5" ng-model="model.eta" placeholder="Learning Rate">
+            <label for="model_epoch"> epoch </label>
+            <input type="text" class="form-control" id="model_epoch" size="4" ng-model="model.epoch" placeholder="Epoch">
+            <label for="model_gamma"> SVC \(\gamma\) </label>
+            <input type="text" class="form-control" size="5" id="model_gamma" ng-model="model.gamma" placeholder="SVC Gamma">
+            <label for="model_kernel"> SVC Kernel </label>
+            <select class="form-control" id="model_kernel" ng-model="model.kernel">
+                <option>rbf</option>
+                <option>linear</option>
+            </select>
+        </div>
+        {% endraw %}
+    </div>
+
+    <div class="col col-xs-12 col-sm-4">
+    </div>
+    <div class="col col-xs-8">
+        <button type="submit" class="btn btn-primary btn-block" ng-click="step.loadAlgorithm()">Check Fit</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_script %}
+
+<link rel="stylesheet" href="/static/css/masonry.css">
+<script src="/static/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script src="/static/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    $('li#factory').addClass('active');
+
+    var $container = $('#thumbnails');
+    $container.imagesLoaded(function() {
+        $container.masonry({
+            columnWidth: '.thumb',
+            itemSelector: '.thumb'
+        });
+    });
+});
+</script>
+{% endblock %}

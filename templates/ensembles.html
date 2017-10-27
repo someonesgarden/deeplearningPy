@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="cover-heading text-center">Ensambles.</h2>
+
+<div id="step1" class="row factory-box">
+    <div class="col col-xs-12 col-sm-4">
+        <h3 class="cover-heading">Estimate generalization performance</h3>
+        <h4>Majority Voting Principle</h4>
+        <p>
+            ROC AUC : Receiver Operator Characteristic area under the curve.
+              </p>
+
+<h4>Stacking</h4>
+        <h4>Bagging - Bootstrap Aggrgating </h4>
+    </div>
+
+    <div class="col col-xs-12 col-sm-8">
+
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_script %}
+
+<link rel="stylesheet" href="/static/css/masonry.css">
+<script src="/static/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script src="/static/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    $('li#ensembles').addClass('active');
+
+    var $container = $('#thumbnails');
+    $container.imagesLoaded(function() {
+        $container.masonry({
+            columnWidth: '.thumb',
+            itemSelector: '.thumb'
+        });
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,18 @@
+# Created by .ignore support plugin (hsz.mobi)
+app/krasapp
+app/movieclassifier
+nlp_class/electronics
+data
+FER
+DLFS
+large_files
+app/__pycache__/
+app/movieclassifier/__pycache__/
+lib/__pycache__/LinearRegression.cpython-35.pyc
+lib/__pycache__/LogisticRegression.cpython-35.pyc
+lib/__pycache__/plots.cpython-35.pyc
+lib/flask/__pycache__/
+model/__pycache__/
+requirements.txt
+requirements3.txt
+static/uploaded/RealTimeMark.csv

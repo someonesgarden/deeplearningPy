@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 class="cover-heading">LATEX.</h1>
+<p>
+    Our LATEX is <a href="https://www.mathjax.org/" target="_blank">Mathjax.</a>
+</p>
+<p>
+     \( E = mc^2 \) <br/>
+     \(\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\)<br/>
+
+</p>
+<p class="lead">
+
+</p>
+<div id="thumbnails" class="row">
+
+    <div class="thumb col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+        </div>
+        <h3>TEST1</h3>
+         Ut enim ad minim veniam,
+    </div>
+
+    <div class="thumb col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+       </div>
+        <h3>TEST2</h3>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+
+    <div class="thumb col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+        </div>
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    </div>
+
+    <div class="thumb col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+        </div>
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+
+     <div class="thumb col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+        </div>
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+     <div class="thumb col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+        </div>
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+     <div class="thumb col-lg-3 col-md-3 col-sm-4 col-xs-6">
+        <div class="thumbnail">
+        </div>
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_script %}
+<link rel="stylesheet" href="/static/css/masonry.css">
+<script src="/static/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script src="/static/bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    $('li#latex').addClass('active');
+
+    var $container = $('#thumbnails');
+    $container.imagesLoaded(function() {
+        $container.masonry({
+            columnWidth: '.thumb',
+            itemSelector: '.thumb'
+        });
+    });
+});
+</script>
+{% endblock %}

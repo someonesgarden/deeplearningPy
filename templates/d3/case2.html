@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if essentials %}
+{% endif %}
+<h1 class="cover-heading">Filter,Map,Reduce,Extent</h1>
+
+<p class="lead"></p>
+<p>
+
+<pre><code>var data = [
+{x:1, inner:{count:5}},
+{x:2, inner:{count:4}},
+{x:3, inner:{count:undefined}},
+{x:3, inner:{count:1}},
+{x:4, inner:{count:8}},
+{x:undefined, inner:{count:8}},
+{x:5, inner:{count:3}},
+{x:5, inner:undefined},
+{x:6, inner:{count:5}},
+];
+var filtered = data.filter(function(d,i){
+return d.x !==undefined &amp;&amp; d.inner !== undefined;
+})
+var mapped = filtered.map(function(d,i){
+return {
+x:d.x, y:d.inner.count
+}
+})
+var filtered2 = mapped.filter(function(d,i){
+return d.x !==undefined &amp;&amp; d.y !== undefined;
+});
+console.log(filtered);
+var data2 = [
+{x:1, inner:[{count: 5},{count: 1},{count: 1}]},
+{x:2, inner:[{count: 2},{count: 1},{count: 1}]},
+{x:3, inner:[{count: 5},{count: 3},{count: 2}]},
+{x:4, inner:[{count: 3},{count: 5},{count: 4}]},
+{x:5, inner:[{count: 4},{count: 1},{count: 2}]},
+{x:6, inner:[{count: 5},{count: 3},{count: 1}]}
+];
+var sum=function(a,b){
+return a+b;
+}
+var reduced = data2.map(function(d,i){
+return {
+x:d.x, y:d.inner.map(function(d){
+return d.count;
+}).reduce(sum, 0)
+}
+});
+console.log(reduced);
+var extent = d3.extent(data, function(d,i){
+return d.x;
+});
+console.log(extent);</code></pre>
+
+</p>
+
+{% endblock%}
+
+{% block footer_script %}
+<link rel="stylesheet" href="/static/bower_components/d3/nv.d3.min.css">
+<script src="/static/bower_components/d3/d3.min.js"></script>
+<link rel="stylesheet" href="/static/css/d3.css">
+<script>
+    //REMOVE ALL 'undefined'
+var data = [
+    {x:1, inner:{count:5}},
+    {x:2, inner:{count:4}},
+    {x:3, inner:{count:undefined}},
+    {x:3, inner:{count:1}},
+    {x:4, inner:{count:8}},
+    {x:undefined, inner:{count:8}},
+    {x:5, inner:{count:3}},
+    {x:5, inner:undefined},
+    {x:6, inner:{count:5}},
+];
+
+var filtered = data.filter(function(d,i){
+        return d.x !==undefined && d.inner !== undefined;
+})
+
+var mapped = filtered.map(function(d,i){
+    return {
+        x:d.x, y:d.inner.count
+    }
+})
+
+var filtered2 = mapped.filter(function(d,i){
+        return d.x !==undefined && d.y !== undefined;
+});
+console.log(filtered);
+
+var data2 = [
+    {x:1, inner:[{count: 5},{count: 1},{count: 1}]},
+    {x:2, inner:[{count: 2},{count: 1},{count: 1}]},
+    {x:3, inner:[{count: 5},{count: 3},{count: 2}]},
+    {x:4, inner:[{count: 3},{count: 5},{count: 4}]},
+    {x:5, inner:[{count: 4},{count: 1},{count: 2}]},
+    {x:6, inner:[{count: 5},{count: 3},{count: 1}]}
+];
+
+    var sum=function(a,b){
+        return a+b;
+    }
+
+    var reduced = data2.map(function(d,i){
+        return {
+            x:d.x, y:d.inner.map(function(d){
+                return d.count;
+            }).reduce(sum, 0)
+        }
+    });
+    console.log(reduced);
+
+    var extent = d3.extent(data, function(d,i){
+        return d.x;
+    });
+    console.log(extent);
+
+//var $base = d3.select('div#d3');
+//var width = $base[0][0].clientWidth;
+//var height = 400;
+//var $svg = $base.append('svg');
+</script>
+{% endblock %}

@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+{% block content %}
+{% if essentials %}
+{% endif %}
+<h1 class="cover-heading">McCullock and Pitts neuron / Linear Regression</h1>
+
+<div class="row">
+<div class="col col-xs-12 col-sm-6 col-md-4">
+    <h4>activation function</h4>
+    <img src="/static/img/linearregression2.png" style="width:100%;"/>
+    <p>
+    \(z = w_1x_1 + \cdots + w_mx_m \)<br/>
+
+    The activation function \(\phi(z) \) is Heaviside step function: <br/>
+    </p>
+    <p>
+    \(
+    \begin{eqnarray}
+    \phi(z)  = \begin{cases} 1 & ( if \ z \geqq \theta ) \\ -1 & ( otherwise ) \end{cases}
+    \end{eqnarray}
+    \)<br/>
+    <br/>
+     For simplicity, bring the threshold \(\theta\) to left side and define a \(w_0 = -\theta \)  and \( x_0=1 \) and  then :<br/>
+    <br/>
+    \(z = w_0x_0 + \cdots + w_mx_m = \vec{w}^{ \mathrm{ T } } \vec{x}\)<br/>
+        <p>
+    \(
+    \begin{eqnarray}
+    \phi(z)  = \begin{cases} 1 & ( if \ z \geqq 0 ) \\ -1 & ( otherwise ) \end{cases}
+    \end{eqnarray}
+    \)<br/>
+    </p>
+    <img src="/static/img/linearregression1.png" style="width:100%;"/>
+    <p>
+        \(w_j \leftarrow w_j + \Delta w_j \) <br/>
+        \(\eta\) is the learning rate : <br/>
+        \(\Delta w_j = \eta ( Target^{(i)} -Output^{(i)} ) \) <br/>
+    </p>
+</div>
+
+<div class="col col-xs-12 col-sm-6 col-md-8">
+ <h4>LinearRegression.py</h4>
+<p>
+<pre><code>import numpy as np
+
+class LinearRegression(object):
+        """ Perceptron classifier.
+
+        Parameters:
+        ------------
+        learning_late : float
+           between 0.0 and 1.0
+        EPOCH : int
+           Passes over the training dataset.
+
+        Attributes:
+        -------------
+        w: 1d-array
+           Weights after fitting.
+        errors_ : list
+           Number os misclassifications in every epoch.
+        """
+
+    def __init__(self, learning_rate=0.01, EPOCH=100):
+        self.learning_rate = learning_rate
+        self.EPOCH = EPOCH
+
+    def fit(self, X, T):
+        """Fit training data.
+
+        Parameters
+        ----------
+        X: {array-like},shape=[n_samples,n_features]
+          Training veectors
+        T: arraylike,shape=[n_samples]
+        Target values.
+
+        Returns
+        ----------
+        self: object
+        """
+
+        N,D = X.shape
+        self.errors_ = []
+
+        #self.w = np.zeros(D+1)
+        self.w = np.random.randn(D + 1)
+
+        for _ in xrange(self.EPOCH):
+            errors = 0
+            for xi, target in zip(X, T):
+                update = self.learning_rate * (target - self.predict(xi))
+                self.w[0] += update * 1
+                self.w[1:] += update * xi
+                errors += int(update != 0.0)
+            self.errors_.append(errors)
+        return self
+
+    def net_input(self, X):
+        return X.dot(self.w[1:]) + self.w[0]
+
+    def predict(self, X):
+        return np.where(self.net_input(X) &gt;= 0.0, 1, -1)
+    </code></pre>
+</p>
+
+<form role="form" class="form-inline" ng-submit="postLinearRegression()">
+
+<input type="text" ng-model="linear_regression_eta" class="form-control" placeholder="learning rate(0.0 ~ 1.0)">
+<input type="text" ng-model="linear_regression_epoch" class="form-control"  placeholder="EPOCH">
+<input type="submit" class="btn form-control btn-danger" value="linear_regression_main.py" />
+</form>
+<p>
+
+<pre><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from lib.LinearRegression import *
+from lib.util import plot_decisionregions
+
+def main(learning_rate= {% raw %}{{linear_regression_eta}}{% endraw %}, EPOCH=10):
+    df = pd.read_csv(&#039;https://archive.ics.uci.edu/ml/&#039;
+     &#039;machine-learning-databases/iris/iris.data&#039;, header=None)
+    y = df.iloc[0:100,4].values
+    T = np.where(y == &#039;Iris-setosa&#039;, 1, -1)
+    X = df.iloc[0:100, [0,2]].values
+
+    plt.scatter(X[:50,0], X[:50,1],color=&#039;red&#039;, marker=&#039;o&#039;)
+    plt.scatter(X[50:,0], X[50:,1],color=&#039;blue&#039;,marker=&#039;x&#039;)
+    plt.xlabel(&#039;petal length&#039;)
+    plt.ylabel(&#039;sepal length&#039;)
+    #plt.show()
+
+    ppn = LinearRegression(learning_rate=learning_rate, EPOCH=EPOCH)
+    ppn.fit(X, T)
+    plt.plot(range(1, len(ppn.errors_)+1), ppn.errors_)
+    #plt.show()
+
+    ###
+    resolution = 0.02
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    X1, X2 = np.meshgrid(
+        np.arange(x1_min, x1_max, resolution),
+        np.arange(x2_min, x2_max, resolution)
+    )
+
+    Z = ppn.predict(np.array([X1.ravel(), X2.ravel()]).T)
+    Z = Z.reshape(X1.shape)
+    print Z.shape
+    plot_decisionregions(X, X1, X2, Z, y)
+    plt.xlabel(&#039;sepal length [cm]&#039;)
+    plt.ylabel(&#039;petal length [cm]&#039;)
+    plt.legend(loc = &#039;upper left&#039;)
+    plt.show()
+
+if __name__ == &#039;__main__&#039;:
+    main()
+    </code></pre>
+
+</p>
+</div>
+</div>
+
+{% endblock%}
+
+{% block footer_script %}
+
+{% endblock %}
