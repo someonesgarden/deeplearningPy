@@ -11,7 +11,6 @@ from flask_moment import Moment
 from datetime import datetime
 import numpy as np
 from lib.flask.Form1 import *
-import pyjade
 import jinja2
 import json
 
@@ -104,7 +103,7 @@ def sentimentanalysis():
 def math():
     essentials = {
         'utc_nowtime': datetime.utcnow(),
-        'site_title': site_title,
+        'site_title': "MATH",
         'title': "MATH.",
         'subtitle': ""
     }

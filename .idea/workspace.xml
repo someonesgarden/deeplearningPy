@@ -2,118 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0873d08-0955-4397-b67a-ea199c276bc4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/colors.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/footer_j.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/layout_j.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/masthead_j.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/math_j.jade" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/bower_components/d3/nv.d3.min.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/static/bower_components/angular/angular.min.js.gzip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/favicon.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/package.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap.min.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-bootstrap/ui-bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-sanitize/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-sanitize/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-sanitize/angular-sanitize.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-sanitize/angular-sanitize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-sanitize/angular-sanitize.min.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-sanitize/angular-sanitize.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-sanitize/angular-sanitize.min.js.map" afterPath="$PROJECT_DIR$/static/bower_components/angular-sanitize/angular-sanitize.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-sanitize/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-sanitize/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-sanitize/package.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-sanitize/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/CHANGELOG.md" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/README.md" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/deploy-docs.sh" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/deploy-docs.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.css" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.css" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.css.map" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.js.map" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/dist/select.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/docs/assets/demo.js" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/docs/assets/demo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/docs/index.html" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/docs/partials/_header.html" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/docs/partials/_header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular-ui-select/package.json" afterPath="$PROJECT_DIR$/static/bower_components/angular-ui-select/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/static/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/static/bower_components/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/static/bower_components/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/static/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/README.md" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/bootstrap-filestyle.jquery.json" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/bootstrap-filestyle.jquery.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/src/bootstrap-filestyle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/src/bootstrap-filestyle.min.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap-filestyle/src/bootstrap-filestyle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/README.md" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/css/bootstrap.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/grunt/configBridge.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/grunt/sauce_browsers.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/affix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/js/transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/button-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/input-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/mixins/tab-focus.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/panels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/scaffolding.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/theme.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/nuget/MyGet.ps1" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/nuget/MyGet.ps1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/nuget/bootstrap.less.nuspec" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/nuget/bootstrap.less.nuspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/nuget/bootstrap.nuspec" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/nuget/bootstrap.nuspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/package.js" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/bootstrap/package.json" afterPath="$PROJECT_DIR$/static/bower_components/bootstrap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/d3/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/d3/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/d3/LICENSE" afterPath="$PROJECT_DIR$/static/bower_components/d3/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/d3/README.md" afterPath="$PROJECT_DIR$/static/bower_components/d3/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/d3/d3.js" afterPath="$PROJECT_DIR$/static/bower_components/d3/d3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/d3/d3.min.js" afterPath="$PROJECT_DIR$/static/bower_components/d3/d3.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/imagesloaded/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/imagesloaded/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/imagesloaded/README.md" afterPath="$PROJECT_DIR$/static/bower_components/imagesloaded/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/imagesloaded/bower.json" afterPath="$PROJECT_DIR$/static/bower_components/imagesloaded/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/imagesloaded/gulpfile.js" afterPath="$PROJECT_DIR$/static/bower_components/imagesloaded/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/imagesloaded/imagesloaded.js" afterPath="$PROJECT_DIR$/static/bower_components/imagesloaded/imagesloaded.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/imagesloaded/imagesloaded.pkgd.js" afterPath="$PROJECT_DIR$/static/bower_components/imagesloaded/imagesloaded.pkgd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/imagesloaded/imagesloaded.pkgd.min.js" afterPath="$PROJECT_DIR$/static/bower_components/imagesloaded/imagesloaded.pkgd.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/masonry/.bower.json" afterPath="$PROJECT_DIR$/static/bower_components/masonry/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/masonry/README.md" afterPath="$PROJECT_DIR$/static/bower_components/masonry/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/masonry/dist/masonry.pkgd.js" afterPath="$PROJECT_DIR$/static/bower_components/masonry/dist/masonry.pkgd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/masonry/dist/masonry.pkgd.min.js" afterPath="$PROJECT_DIR$/static/bower_components/masonry/dist/masonry.pkgd.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bower_components/masonry/masonry.js" afterPath="$PROJECT_DIR$/static/bower_components/masonry/masonry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout_j.jade" afterPath="$PROJECT_DIR$/templates/layout_j.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/math_j.jade" afterPath="$PROJECT_DIR$/templates/math_j.jade" />
     </list>
     <ignored path="DeepLearningPy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,18 +41,31 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1485">
+                <caret line="99" column="3" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,8 +84,8 @@
       <file leaf-file-name="math_j.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/math_j.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -197,8 +104,8 @@
       <file leaf-file-name="layout_j.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/layout_j.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            <state relative-caret-position="60">
+              <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -259,7 +166,6 @@
         <option value="$PROJECT_DIR$/DLFS/mnist_show.py" />
         <option value="$PROJECT_DIR$/DLFS/mnist_minibatch.py" />
         <option value="$PROJECT_DIR$/DLFS/common/functions.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/DLFS/train_neuralnet.py" />
         <option value="$PROJECT_DIR$/DLFS/layer_native.py" />
         <option value="$PROJECT_DIR$/DLFS/common/layers.py" />
@@ -293,13 +199,14 @@
         <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/model/ensembles.py" />
         <option value="$PROJECT_DIR$/.bowerrc" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/layout.jade" />
         <option value="$PROJECT_DIR$/templates/math_l.jade" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/templates/math_j.jade" />
         <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/templates/math_j.jade" />
         <option value="$PROJECT_DIR$/templates/layout_j.jade" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -310,7 +217,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="212" />
+    <option name="x" value="387" />
     <option name="y" value="23" />
     <option name="width" value="1372" />
     <option name="height" value="1027" />
@@ -367,6 +274,19 @@
             <path>
               <item name="DeepLearningPy" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepLearningPy" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="bower_components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DeepLearningPy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepLearningPy" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="bower_components" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-filestyle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DeepLearningPy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepLearningPy" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -388,11 +308,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/static/bower_components" />
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/basic" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/large_files" />
@@ -772,7 +692,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="212" y="23" width="1372" height="1027" extended-state="0" />
+    <frame x="387" y="23" width="1372" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -783,7 +703,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32503113" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Graph Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0042918455" sideWeight="0.49398497" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.49398497" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26842105" sideWeight="0.49217004" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Graph Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866243" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17252396" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -832,13 +752,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/sentiment_analysis_app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/LogisticRegression.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -1153,22 +1066,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/math_j.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="11" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bower_components/aframe-html-shader/lib/html2canvas/log.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1185,14 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout_j.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.bowerrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1203,9 +1092,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout_j.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/math_j.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1485">
+            <caret line="99" column="3" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

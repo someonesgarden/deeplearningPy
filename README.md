@@ -97,9 +97,7 @@
     > X_std = np.copy(X)
     > X_std[:,0] = (X[:,0] - X[:,0].mean()) / X[:,0].std()
     
-    
-
-    
+   
 
 ## 使用するPythonパッケージ
 * Numpy 1.9.1
