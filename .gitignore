@@ -2,6 +2,7 @@
 app/krasapp
 app/movieclassifier
 nlp_class/electronics
+static/bower_components
 data
 FER
 DLFS

@@ -11,6 +11,7 @@ from flask_moment import Moment
 from datetime import datetime
 import numpy as np
 from lib.flask.Form1 import *
+import pyjade
 import jinja2
 import json
 
@@ -24,10 +25,14 @@ import app.sentiment_analysis_app as saa
 # define application
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'atala0628'
+app.debug = True
+app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
+
 moment = Moment(app)
 manager = Manager(app)
 bootstrap = Bootstrap(app)
 site_title = "funwithdata:Deep"
+
 
 
 # Routings
@@ -103,7 +108,7 @@ def math():
         'title': "MATH.",
         'subtitle': ""
     }
-    return render_template('math.html', essentials=essentials, test1=123)
+    return render_template('math_j.jade', essentials=essentials, test1=123)
 
 
 @app.route('/math/<param>')
