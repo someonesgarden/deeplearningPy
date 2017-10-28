@@ -18,8 +18,10 @@ import model.DataPreprocessing as mdp
 import model.ModelFitting as mmf
 import app.sentiment_analysis_app as saa
 
-#reload(sys)
-#sys.setdefaultencoding("utf-8")
+if sys.version[0] == '2':
+    import importlib
+    importlib.reload(sys)
+    sys.setdefaultencoding("utf-8")
 
 # define application
 app = Flask(__name__)
@@ -31,7 +33,6 @@ moment = Moment(app)
 manager = Manager(app)
 bootstrap = Bootstrap(app)
 site_title = "funwithdata:Deep"
-
 
 
 # Routings
