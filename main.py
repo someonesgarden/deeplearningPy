@@ -15,7 +15,7 @@ import jinja2
 import json
 
 import model.DataPreprocessing as mdp
-import model.ModelFitting as mmf
+#import model.ModelFitting as mmf
 import app.sentiment_analysis_app as saa
 
 if sys.version[0] == '2':
@@ -53,7 +53,7 @@ def index():
         'title': "DEEP LEARNINGS BY SOMEONESGARDEN.",
         'subtitle': "welcome, %s !! " % name if name is not None else ""
     }
-    return render_template('index.html', form=form,essentials=essentials)
+    return render_template('index_j.jade', form=form,essentials=essentials)
 
 
 @app.route('/sentimentanalysis', methods=['GET', 'POST'])
@@ -287,7 +287,6 @@ class MyNotFoundException(Exception):
 def error_handler(err):
     # abort(404)
     return render_template('404.html', error=err), 404
-
 
 @app.errorhandler(ValueError)
 @app.errorhandler(UnicodeDecodeError)

@@ -1,0 +1,46 @@
+extends layout_j
+
+block content
+    div.site-wrapper: div.site-wrapper-inner: div.container
+        div.row.factory-boxr(style="min-height:400px")
+            div.col-xs-12(style="margin-top:30px;height:100px;")
+                h2 Deep Learning Applications.
+
+            div.col-sm-9.col-xs-12(style="border-right:thin solid silver;margin-bottom:50px;")
+                h3: a(href="/factory") App#1 : Sentiment Analysis
+                div.form-group
+                    textarea.form-control(ng-model="sentiment.rawtext", rows="4")
+
+                    button.btn.btn-primary.btn-block(type="submit", ng-click="sentiment.analyseAction('analyse')") Analyse
+
+                    div(ng-hide="sentiment.label==''")
+                        br
+                        h3 Prediction |
+                        span(style="color:#23dea1;",ng-model="sentiment.proba")
+                        span(ng-model="sentiment.label")
+                        br
+                        div.btn-group.btn-group-justified
+                            label.btn.btn-success(ng-model="sentiment.feedback" uib-btn-radio="1") Correct
+                            label.btn.btn-success(ng-model="sentiment.feedback" uib-btn-radio="0", ng-change="sentiment.analyseAction('feedback')") Incorrect
+
+            div.col-sm-3.col-xs-12
+                h4: a(href="/factory") Basic Factory
+                h4: a(href="/pipelines") PipeLine
+
+
+block footer_script
+    link(rel="stylesheet", href="/static/css/masonry.css")
+    script(src="/static/bower_components/masonry/dist/masonry.pkgd.min.js")
+    script(src="/static/bower_components/imagesloaded/imagesloaded.pkgd.min.js")
+    script.
+        $(document).ready(function() {
+            $('li#math').addClass('active');
+
+            var $container = $('#thumbnails');
+            $container.imagesLoaded(function() {
+                $container.masonry({
+                    columnWidth: '.thumb',
+                    itemSelector: '.thumb'
+                });
+            });
+        });
